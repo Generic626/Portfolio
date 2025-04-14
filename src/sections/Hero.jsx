@@ -1,11 +1,12 @@
 "use client";
 
-import ParagraphTitle from "@/components/ParagraphTitle";
+import ParagraphTitle from "@/components/UI/ParagraphTitle";
 import { BsGithub } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { GoDownload } from "react-icons/go";
-import HighlightButton from "@/components/HighlightButton";
+import HighlightButton from "@/components/UI/HighlightButton";
+import Paragraph from "@/components/UI/Paragraph";
 
 const Hero = () => {
   const handleSocialOnClick = (url) => {
@@ -14,9 +15,9 @@ const Hero = () => {
   return (
     <section id="hero" className="w-full h-[90vh] bg-foreground relative">
       {/* Name */}
-      <div className="absolute left-[15%] top-[50%] translate-y-[-50%] text-[64px]/14 font-semibold text-white text-center w-fit z-20">
-        <div>Fung Matthew</div>
-        <div>Tze-Ken</div>
+      <div className="absolute left-[11%] top-[63%] translate-y-[-63%] text-[128px]/36 font-semibold text-highlight text-center w-fit h-fit z-20">
+        <div>Matthew</div>
+        <div className="ml-[64px]">Fung</div>
       </div>
 
       {/* Hero */}
@@ -27,10 +28,8 @@ const Hero = () => {
 
       {/* Short Description */}
       <div className="flex flex-col gap-2 absolute right-[16%] top-[60%] translate-y-[-60%] text-white w-[280px]">
-        <ParagraphTitle title="Hello" />
-        <p className="text-[32px]/8">
-          I'm a Software Engineer working in Hong Kong.
-        </p>
+        <ParagraphTitle title="Hello there" />
+        <Paragraph text="I'm a Software Engineer working in Hong Kong." />
         <div className="flex gap-4 justify-center lg:justify-normal items-center my-4">
           <BsGithub
             className="social-icons"
