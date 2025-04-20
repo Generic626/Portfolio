@@ -12,9 +12,9 @@ const Footer = () => {
   return (
     <section
       id="footer"
-      className="w-full h-[40vh] flex justify-center items-center bg-foreground px-32"
+      className="w-full h-[40vh] flex justify-center items-center bg-foreground px-4 md:px-32"
     >
-      <div className="flex flex-col gap-5 md:justify-center items-center md:w-full bg-background border border-zinc-600 rounded-lg p-12">
+      <div className="flex flex-col gap-5 md:justify-center items-center w-full bg-background border border-zinc-600 rounded-lg p-12">
         {/* Social Icons */}
         <div className="flex gap-4 justify-center lg:justify-normal items-center my-4">
           <BsGithub

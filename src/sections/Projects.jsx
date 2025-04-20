@@ -1,32 +1,51 @@
+"use client";
 import { ProjectBlock } from "@/components/UI/Block";
-import React from "react";
+import { useState } from "react";
 import projectList from "@/data/project";
+import ProjectModal from "@/components/ProjectModal";
 
 const Projects = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleProjectClick = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <section
       id="projects"
-      className="w-full h-[60vh] flex justify-center items-center bg-foreground"
+      className="w-full md:h-[60vh] py-8 md:py-0 flex justify-center items-center bg-foreground"
     >
-      <div className="w-[70%] flex flex-col md:flex-row items-center gap-2">
-        {/* Section Title */}
-        <div className="w-1/2 flex justify-center items-center border border-zinc-600 rounded-lg p-4">
+      <div className="w-[90%] md:w-[70%] flex flex-col md:flex-row items-center gap-2">
+        {/* Project Bento */}
+        <div className="order-2 md:order-1 w-full md:w-1/2 flex justify-center items-center border border-zinc-600 rounded-lg p-4">
           <div className="grid grid-cols-12 grid-flow-dense gap-4">
             {/* Projects */}
             {projectList.map((item, index) => {
-              return <ProjectBlock key={index} src={item.projectImg} />;
+              return (
+                <ProjectBlock
+                  key={index}
+                  onClickHandler={handleProjectClick}
+                  projectData={item}
+                />
+              );
             })}
           </div>
         </div>
 
-        {/* Project Bento */}
-        <div className="w-1/2 flex flex-col px-5">
+        {/* Section Title */}
+        <div className="order-1 md:order-2 w-full md:w-1/2 flex flex-col md:justify-center px-5 mb-2 md:mb-0">
           <span className="text-[96px] text-highlight w-fit ">Projects</span>
           <span className="text-[22px]">
             These are the projects that I've helped build
           </span>
         </div>
       </div>
+
+      {/* Project Modal */}
+      <ProjectModal open={open} handleClose={handleClose} />
     </section>
   );
 };

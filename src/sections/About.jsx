@@ -2,15 +2,18 @@ import Description from "@/components/UI/Description";
 import ExperienceLabel from "@/components/ExperienceLabel";
 import ParagraphTitle from "@/components/UI/ParagraphTitle";
 import TechCard from "@/components/TechCard";
+import careerList from "@/data/career";
+import ExperienceCard from "@/components/ExperienceCard";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="w-full h-[50vh] flex justify-center items-center"
+      className="w-full h-auto my-16  flex flex-col justify-center items-center gap-14 md:gap-16"
     >
-      <div className="w-[70%] flex flex-col md:flex-row gap-2">
-        <div className="w-1/2 flex flex-col gap-4">
+      <div className="w-[80%] md:w-[75%] lg:w-[60%] flex flex-col lg:flex-row gap-2">
+        {/* About Me */}
+        <div className="lg:w-1/2 flex flex-col gap-4">
           <ParagraphTitle title="About Me" />
           <Description
             text="I graduated from PolyU in 2024 as a Computing Major.
@@ -31,7 +34,8 @@ const About = () => {
           </div>
         </div>
 
-        <div className="w-1/2 flex flex-col">
+        {/* Skills */}
+        <div className="lg:w-1/2 mt-4 md:mt-0 flex flex-col">
           <span className="text-[32px] font-semibold mb-4">My Core Skills</span>
           <div className="grid grid-cols-3 gap-2">
             <TechCard src={"/tech/html.png"} />
@@ -41,6 +45,24 @@ const About = () => {
             <TechCard src={"/tech/framer-motion.png"} />
             <TechCard src={"/tech/dotnet.png"} />
           </div>
+        </div>
+      </div>
+
+      <div id="career" className="w-[80%] md:w-[75%] lg:w-[60%]">
+        <div className="w-full pb-8 pt-0 flex flex-col items-center gap-5">
+          {careerList.map((item, index) => {
+            return (
+              <ExperienceCard
+                key={index}
+                src={item.companyLogo}
+                company={item.company}
+                role={item.jobTitle}
+                description={item.jobDesc}
+                dates={item.timeframe}
+                badges={item.badges}
+              />
+            );
+          })}
         </div>
       </div>
     </section>

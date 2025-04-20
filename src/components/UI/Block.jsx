@@ -2,6 +2,7 @@
 
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
+import useProjectStore from "@/store/useProjectStore";
 
 const Block = ({ className, ...rest }) => {
   return (
@@ -30,10 +31,24 @@ const Block = ({ className, ...rest }) => {
   );
 };
 
-const ProjectBlock = ({ src }) => {
+const ProjectBlock = ({ projectData, onClickHandler }) => {
+  const { setData } = useProjectStore();
+
+  const handleClick = () => {
+    setData(projectData);
+    onClickHandler();
+  };
+
   return (
-    <Block whileHover={{ scale: 1.1 }} className="col-span-6 cursor-pointer">
-      <img src={src} className="h-[150px] w-auto object-cover rounded-lg" />
+    <Block
+      onClick={handleClick}
+      whileHover={{ scale: 1.1 }}
+      className="col-span-6 cursor-pointer"
+    >
+      <img
+        src={projectData.projectThumbnail}
+        className="h-[150px] w-auto object-cover rounded-lg"
+      />
     </Block>
   );
 };
