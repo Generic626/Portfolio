@@ -39,7 +39,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed border border-zinc-600 bg-foreground z-50 h-[55px] w-fit rounded-lg py-3 px-5 flex justify-center items-center gap-[64px] top-[50px] md:top-[30px] left-1/2 translate-x-[-50%]">
+    <nav className="fixed border border-zinc-600 bg-foreground z-100 h-[55px] w-fit rounded-lg py-3 px-5 flex justify-center items-center gap-[64px] top-[50px] md:top-[30px] left-1/2 translate-x-[-50%]">
       <NavItem href="hero" icon={<AiOutlineHome />} lbl="Home" />
       <NavItem href="about" icon={<MdInfoOutline />} lbl="About" />
       <NavItem href="career" icon={<MdBusinessCenter />} lbl="Career" />
