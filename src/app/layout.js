@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata = {
   title: "Matthew Fung",
   description: "Welcome To My Portfolio",
-  icon: [{ url: "/assets/avatar.png", type: "image/png" }],
+  icon: [{ url: "/avatar.png", type: "image/png" }],
 };
 
 export default function RootLayout({ children }) {
