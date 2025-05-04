@@ -7,7 +7,6 @@ import { IoMdMail } from "react-icons/io";
 import { GoDownload } from "react-icons/go";
 import HighlightButton from "@/components/UI/HighlightButton";
 import Paragraph from "@/components/UI/Paragraph";
-import ReavealEffect from "@/components/UI/RevealEffect";
 
 const Hero = () => {
   const handleSocialOnClick = (url) => {
@@ -58,10 +57,7 @@ const Hero = () => {
           <div className="flex justify-normal">
             <HighlightButton
               onClickHandler={() => {
-                window.open(
-                  "/Fung_Matthew_Tze_Ken_Resume_(IT)_2023.pdf",
-                  "_blank"
-                );
+                window.open("/Fung Matthew Tze Resume.pdf", "_blank");
               }}
               text="Full Resume"
               icon={<GoDownload />}
