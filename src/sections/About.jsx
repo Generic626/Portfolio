@@ -9,9 +9,9 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full h-auto my-16  flex flex-col justify-center items-center gap-14 md:gap-16"
+      className="w-full h-auto py-16  flex flex-col justify-center items-center gap-14 md:gap-16 relative"
     >
-      <div className="w-[80%] md:w-[75%] lg:w-[60%] flex flex-col lg:flex-row gap-2">
+      <div className="w-[80%] md:w-[75%] lg:w-[60%] xl:w-[50%] flex flex-col lg:flex-row gap-2 z-20">
         {/* About Me */}
         <div className="lg:w-1/2 flex flex-col gap-4">
           <ParagraphTitle title="About Me" />
@@ -48,7 +48,10 @@ const About = () => {
         </div>
       </div>
 
-      <div id="career" className="w-[80%] md:w-[75%] lg:w-[60%]">
+      <div
+        id="career"
+        className="w-[80%] md:w-[75%] lg:w-[60%] xl:w-[50%] z-20"
+      >
         <div className="w-full pb-8 pt-0 flex flex-col items-center gap-5">
           {careerList.map((item, index) => {
             return (
@@ -65,6 +68,24 @@ const About = () => {
           })}
         </div>
       </div>
+
+      {/* Circular Decor */}
+      <img
+        src="/UI/circular-decor.png"
+        className="absolute left-0 top-[10%] transform translate-x-[-55%] h-[15%] md:h-[30%]"
+      />
+
+      {/* Circular Decor */}
+      <img
+        src="/UI/circular-decor.png"
+        className="absolute right-0 top-[60%] transform translate-x-[55%] h-[15%] md:h-[30%]"
+      />
+
+      {/* Decor */}
+      <img
+        src="/UI/decor.png"
+        className="absolute left-0 bottom-0 h-[10%] md:h-[30%]"
+      />
     </section>
   );
 };

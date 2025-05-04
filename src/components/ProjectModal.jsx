@@ -23,11 +23,11 @@ const ProjectModal = ({ open, handleClose }) => {
         {/* Project Image */}
         <img
           src={projectData.projectImgList[0]}
-          className="rounded-lg "
+          className="rounded-t-lg w-auto"
           alt={projectData.title}
         />
         {/* Project Description */}
-        <div className="p-4 rounded-md bg-foreground flex flex-col gap-2">
+        <div className="p-4 rounded-b-md bg-foreground flex flex-col gap-2 w-full">
           {/* Project Title */}
           <h2 className="text-xl font-bold text-highlight">
             {projectData.title}

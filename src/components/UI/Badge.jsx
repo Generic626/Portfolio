@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 
 const Badge = ({ className, img }) => {
   return (
-    <div className="cursor-pointer">
+    <div>
       <div
         className={twMerge(
           "bg-background rounded-full px-4 py-2 w-fit",
