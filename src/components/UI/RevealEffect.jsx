@@ -19,6 +19,8 @@ const ReavealEffect = ({
     }
   }, [isInView]);
 
+  console.log(initialX);
+
   return (
     <motion.span
       ref={ref}

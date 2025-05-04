@@ -7,6 +7,7 @@ import { IoMdMail } from "react-icons/io";
 import { GoDownload } from "react-icons/go";
 import HighlightButton from "@/components/UI/HighlightButton";
 import Paragraph from "@/components/UI/Paragraph";
+import ReavealEffect from "@/components/UI/RevealEffect";
 
 const Hero = () => {
   const handleSocialOnClick = (url) => {
@@ -31,6 +32,7 @@ const Hero = () => {
         />
 
         {/* Short Description */}
+
         <div className="flex flex-col gap-2 absolute right-[50%] translate-x-[50%] lg:right-[10%] lg:translate-x-0 xl:right-[20%] top-[60%] lg:top-[75%] lg:translate-y-[-75%] text-white w-[280px] z-50 p-2 bg-foreground/80 lg:bg-none rounded-md">
           <ParagraphTitle title="Hello there" />
           <Paragraph text="I'm a Software Engineer working in Hong Kong." />
