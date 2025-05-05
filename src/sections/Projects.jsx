@@ -20,7 +20,7 @@ const Projects = () => {
     >
       <div className="w-[90%] md:w-[70%] flex flex-col md:flex-row items-center gap-2 z-20">
         {/* Project Bento */}
-        <div className="order-2 md:order-1 w-full md:w-1/2 flex justify-center items-center border border-zinc-600 rounded-lg p-4">
+        <div className="bg-foreground order-2 md:order-1 w-full md:w-1/2 flex justify-center items-center border border-zinc-600 rounded-lg p-4">
           <div className="grid grid-cols-12 grid-flow-dense gap-4">
             {/* Projects */}
             {projectList.map((item, index) => {
