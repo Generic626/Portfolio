@@ -49,7 +49,7 @@ const Hero = () => {
                 );
               }}
             />
-            <a href="mailto:someone@example.com">
+            <a href="mailto:matthew.fung.career@gmail.com">
               <IoMdMail className="social-icons" />
             </a>
           </div>
