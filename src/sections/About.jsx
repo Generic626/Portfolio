@@ -4,6 +4,7 @@ import ParagraphTitle from "@/components/UI/ParagraphTitle";
 import TechCard from "@/components/TechCard";
 import careerList from "@/data/career";
 import ExperienceCard from "@/components/ExperienceCard";
+import ReavealEffect from "@/components/UI/RevealEffect";
 
 const About = () => {
   return (
@@ -55,15 +56,21 @@ const About = () => {
         <div className="w-full pb-8 pt-0 flex flex-col items-center gap-5">
           {careerList.map((item, index) => {
             return (
-              <ExperienceCard
+              <ReavealEffect
                 key={index}
-                src={item.companyLogo}
-                company={item.company}
-                role={item.jobTitle}
-                description={item.jobDesc}
-                dates={item.timeframe}
-                badges={item.badges}
-              />
+                initialX={-100}
+                viewOnlyOnce={true}
+                delay={0.2}
+              >
+                <ExperienceCard
+                  src={item.companyLogo}
+                  company={item.company}
+                  role={item.jobTitle}
+                  description={item.jobDesc}
+                  dates={item.timeframe}
+                  badges={item.badges}
+                />
+              </ReavealEffect>
             );
           })}
         </div>

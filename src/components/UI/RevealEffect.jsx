@@ -8,9 +8,10 @@ const ReavealEffect = ({
   initialY = 0,
   duration = 1,
   delay = 0,
+  viewOnlyOnce = false,
 }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: viewOnlyOnce });
   const controls = useAnimation();
 
   useEffect(() => {
@@ -18,8 +19,6 @@ const ReavealEffect = ({
       controls.start("visible");
     }
   }, [isInView]);
-
-  console.log(initialX);
 
   return (
     <motion.span
