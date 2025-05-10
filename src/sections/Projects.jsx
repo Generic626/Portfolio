@@ -3,6 +3,7 @@ import { ProjectBlock } from "@/components/UI/Block";
 import { useState } from "react";
 import projectList from "@/data/project";
 import ProjectModal from "@/components/ProjectModal";
+import ReavealEffect from "@/components/UI/RevealEffect";
 
 const Projects = () => {
   const [open, setOpen] = useState(false);

@@ -5,6 +5,7 @@ import { MdInfoOutline } from "react-icons/md";
 import { MdBusinessCenter } from "react-icons/md";
 import { FaDiagramProject } from "react-icons/fa6";
 import { useEffect } from "react";
+import ReavealEffect from "./UI/RevealEffect";
 
 const Navbar = () => {
   useEffect(() => {
@@ -39,12 +40,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed border border-zinc-600 bg-foreground z-100 h-[55px] w-fit rounded-lg py-3 px-5 flex justify-center items-center gap-[64px] top-[50px] md:top-[30px] left-1/2 translate-x-[-50%]">
-      <NavItem href="hero" icon={<AiOutlineHome />} lbl="Home" />
-      <NavItem href="about" icon={<MdInfoOutline />} lbl="About" />
-      <NavItem href="career" icon={<MdBusinessCenter />} lbl="Career" />
-      <NavItem href="projects" icon={<FaDiagramProject />} lbl="Projects" />
-    </nav>
+    <ReavealEffect duration={0.5}>
+      <nav className="fixed border border-zinc-600 bg-foreground z-100 h-[55px] w-fit rounded-lg py-3 px-5 flex justify-center items-center gap-[64px] top-[50px] md:top-[30px] left-1/2 translate-x-[-50%]">
+        <NavItem href="hero" icon={<AiOutlineHome />} lbl="Home" />
+        <NavItem href="about" icon={<MdInfoOutline />} lbl="About" />
+        <NavItem href="career" icon={<MdBusinessCenter />} lbl="Career" />
+        <NavItem href="projects" icon={<FaDiagramProject />} lbl="Projects" />
+      </nav>
+    </ReavealEffect>
   );
 };
 
