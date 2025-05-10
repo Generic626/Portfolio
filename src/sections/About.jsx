@@ -45,7 +45,7 @@ const About = () => {
         {/* Skills */}
         <motion.div
           initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, delay: 0.2 }}
           className="lg:w-1/2 mt-4 md:mt-0 flex flex-col"
         >
