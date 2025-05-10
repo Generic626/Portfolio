@@ -23,6 +23,7 @@ const Projects = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0 }}
+        viewport={{ once: true }}
         className="w-[90%] md:w-[70%] flex flex-col md:flex-row items-center gap-2 z-20"
       >
         {/* Project Bento */}
@@ -46,6 +47,7 @@ const Projects = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1, delay: 0 }}
+          viewport={{ once: true }}
           className="order-1 md:order-2 w-full md:w-1/2 flex flex-col md:justify-center px-5 mb-2 md:mb-0"
         >
           <span className="text-[96px] text-highlight w-fit ">Projects</span>
