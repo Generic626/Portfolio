@@ -2,7 +2,7 @@ const careerList = [
   {
     timeframe: "2024 Jun - Current",
     company: "Innocorn Technology",
-    companyLogo: "/company/Innocorn.png",
+    companyLogo: "/company/innocorn.png",
     jobTitle: "Software Engineer (Full Time)",
     jobDesc:
       "After finshing my final semester, I have officially joined Innocorn as a full time Software Engineer. My duties are to help develop the company's flagship project, a Saas project that revolves around generative chatbot. The admin portal was developed in C#.",
@@ -17,7 +17,7 @@ const careerList = [
   {
     timeframe: "2023 Sep - 2024 Mar",
     company: "Innocorn Technology",
-    companyLogo: "/company/Innocorn.png",
+    companyLogo: "/company/innocorn.png",
     jobTitle: "Web Developer (Part Time)",
     jobDesc:
       "After my previous Internship, I got accepted to work for the same company under a different branch. During the period, I continue to improve the Hotel Alexandra Chatbot and develop other new features.",

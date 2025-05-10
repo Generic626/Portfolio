@@ -50,7 +50,7 @@ const projectList = [
     projectImgList: ["/projects/personal_portfolio.png"],
     title: "Personal Portfolio",
     description:
-      "This project is the project that you are scrolling through. I've used Next.js as the fundamental framework to build this portfolio. Along side Tailwind CSS and framer motion for stlying.",
+      "This project is the project that you are scrolling through. I've used Next.js as the fundamental framework to build this portfolio. Along side Tailwind CSS and framer motion for stlying and animations.",
     projectUrl:
       "https://www.hotelalexandrahk.com/hotelalexandra/en/?gclid=Cj0KCQjw-pyqBhDmARIsAKd9XINjIjuZNvrCEW6D4lDncnmDQTvmnHU59wZBsTO5DzPzeeW9ITPgxYkaAmFAEALw_wcB#",
     badges: [
